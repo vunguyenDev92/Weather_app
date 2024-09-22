@@ -1,23 +1,18 @@
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Button } from 'react-native'
 import React from 'react'
-import Navigation from '../constants/navigation/navigation'
+import { useRouter } from 'expo-router'
+import ScreenWrapper from '../components/ScreenWrapper';
+import Loading from '../components/Loading';
 const index = () => {
+    const router = useRouter();
     return (
-        <View style={styles.container}>
-            <Text>index</Text>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Loading />
         </View>
+
+
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-})
-
 
 
 export default index
